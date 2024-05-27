@@ -32,11 +32,44 @@
             </constraints>
             <point key="canvasLocation" x="38.931297709923662" y="19.718309859154932"/>
         </view>
+        <viewController id="SCR-rg-hlW">
+            <view key="view" contentMode="scaleToFill" id="mVt-nM-1Xd">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LuxéCart" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="geo-CX-myb">
+                        <rect key="frame" x="88" y="365.33333333333331" width="217" height="121.66666666666669"/>
+                        <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="36"/>
+                        <color key="textColor" systemColor="viewFlipsideBackgroundColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Life, My Style" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5B-rv-82t">
+                        <rect key="frame" x="175" y="446" width="136.66666666666663" height="37.333333333333314"/>
+                        <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="11"/>
+                        <color key="textColor" systemColor="viewFlipsideBackgroundColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <viewLayoutGuide key="safeArea" id="08y-Hf-rjV"/>
+                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <constraints>
+                    <constraint firstItem="s5B-rv-82t" firstAttribute="top" secondItem="geo-CX-myb" secondAttribute="bottom" constant="-41" id="7CM-FB-FiY"/>
+                    <constraint firstItem="s5B-rv-82t" firstAttribute="leading" secondItem="geo-CX-myb" secondAttribute="trailing" constant="-130" id="P0v-M2-a28"/>
+                    <constraint firstItem="geo-CX-myb" firstAttribute="centerX" secondItem="mVt-nM-1Xd" secondAttribute="centerX" id="PfQ-Yn-kKN"/>
+                    <constraint firstItem="08y-Hf-rjV" firstAttribute="trailing" secondItem="s5B-rv-82t" secondAttribute="trailing" constant="81.329999999999998" id="enZ-ig-8Vy"/>
+                    <constraint firstItem="geo-CX-myb" firstAttribute="centerY" secondItem="mVt-nM-1Xd" secondAttribute="centerY" id="vJW-2H-H1e"/>
+                </constraints>
+            </view>
+            <point key="canvasLocation" x="1051" y="128"/>
+        </viewController>
     </objects>
     <resources>
         <image name="SplashScreenWithAppName" width="1290" height="2796"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="viewFlipsideBackgroundColor">
+            <color red="0.12156862745098039" green="0.12941176470588237" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

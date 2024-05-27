@@ -9,16 +9,16 @@ import UIKit
 
 class LaunchViewController: LCBaseViewController {
 
-    private var loginbutton = LCButton(title: "Login", backgroundColor: .clear, cornerRadius: 25, borderColor: UIColor.white.cgColor, borderWidth: 2)
-
     private var signupbutton = LCButton(title: "Sign up", backgroundColor: .clear, cornerRadius: 25, borderColor: UIColor.white.cgColor, borderWidth: 2)
+
+    private var loginbutton = LCButton(title: "Login", backgroundColor: .clear, cornerRadius: 25, borderColor: UIColor.white.cgColor, borderWidth: 2)
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
     override func addViews() {
-        view.addSubviews(loginbutton, signupbutton)
+        view.addSubviews(signupbutton, loginbutton)
     }
 
     override func layoutConstraints() {
@@ -36,18 +36,19 @@ class LaunchViewController: LCBaseViewController {
     }
 
     override func setTargets() {
-        loginbutton.addTarget(self, action: #selector(loginbuttonTap), for: .touchUpInside)
         signupbutton.addTarget(self, action: #selector(signupbuttonTap), for: .touchUpInside)
-    }
-
-    @objc
-    private func loginbuttonTap() {
-        print(#function)
+        loginbutton.addTarget(self, action: #selector(loginbuttonTap), for: .touchUpInside)
     }
 
     @objc
     private func signupbuttonTap() {
-        print(#function)
+        let vc = SignupViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
 
+    @objc
+    private func loginbuttonTap() {
+        let vc = LoginViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }

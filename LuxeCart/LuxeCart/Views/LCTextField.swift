@@ -1,20 +1,17 @@
 //
-//  LCButton.swift
+//  LCTextField.swift
 //  LuxeCart
 //
-//  Created by Janvi Arora on 26/05/24.
+//  Created by Janvi Arora on 27/05/24.
 //
 
-import Foundation
 import UIKit
 
-class LCButton: UIButton {
+class LCTextField: UITextField {
 
-    init(title: String, backgroundColor: UIColor = .clear, titleColor: UIColor = .white, cornerRadius: CGFloat = 0, borderColor: CGColor? = nil, borderWidth: CGFloat = 0) {
+    init(backgroundColor: UIColor = .clear, cornerRadius: CGFloat = 8, borderColor: CGColor? = UIColor.secondarySystemBackground.cgColor, borderWidth: CGFloat = 2) {
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
-        setTitle(title, for: .normal)
-        setTitleColor(titleColor, for: .normal)
         self.backgroundColor = backgroundColor
         layer.cornerRadius = cornerRadius
         layer.borderWidth = borderWidth
