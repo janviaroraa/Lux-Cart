@@ -1,1 +1,1 @@
-# Lux-Cart
+# Luxé-Cart
