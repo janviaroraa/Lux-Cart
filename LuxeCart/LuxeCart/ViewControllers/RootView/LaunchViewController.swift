@@ -1,0 +1,53 @@
+//
+//  LaunchViewController.swift
+//  LuxeCart
+//
+//  Created by Janvi Arora on 27/05/24.
+//
+
+import UIKit
+
+class LaunchViewController: LCBaseViewController {
+
+    private var loginbutton = LCButton(title: "Login", backgroundColor: .clear, cornerRadius: 25, borderColor: UIColor.white.cgColor, borderWidth: 2)
+
+    private var signupbutton = LCButton(title: "Sign up", backgroundColor: .clear, cornerRadius: 25, borderColor: UIColor.white.cgColor, borderWidth: 2)
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
+    override func addViews() {
+        view.addSubviews(loginbutton, signupbutton)
+    }
+
+    override func layoutConstraints() {
+        NSLayoutConstraint.activate([
+            signupbutton.bottomAnchor.constraint(equalTo: loginbutton.topAnchor, constant: -20),
+            signupbutton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 25),
+            signupbutton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -25),
+            signupbutton.heightAnchor.constraint(equalToConstant: 50),
+
+            loginbutton.leadingAnchor.constraint(equalTo: signupbutton.leadingAnchor),
+            loginbutton.trailingAnchor.constraint(equalTo: signupbutton.trailingAnchor),
+            loginbutton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -30),
+            loginbutton.heightAnchor.constraint(equalToConstant: 50)
+        ])
+    }
+
+    override func setTargets() {
+        loginbutton.addTarget(self, action: #selector(loginbuttonTap), for: .touchUpInside)
+        signupbutton.addTarget(self, action: #selector(signupbuttonTap), for: .touchUpInside)
+    }
+
+    @objc
+    private func loginbuttonTap() {
+        print(#function)
+    }
+
+    @objc
+    private func signupbuttonTap() {
+        print(#function)
+    }
+
+}
