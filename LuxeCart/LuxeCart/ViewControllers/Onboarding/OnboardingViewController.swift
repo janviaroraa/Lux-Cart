@@ -10,21 +10,12 @@ import UIKit
 class DemoViewController: UIPageViewController {
 
     var pages = [UIViewController]()
-
-    // external controls
-    let skipButton = UIButton()
-    let nextButton = UIButton()
     let pageControl = UIPageControl()
     let initialPage = 0
-
-    // animations
-    var skipButtonTopAnchor: NSLayoutConstraint?
-    var nextButtonTopAnchor: NSLayoutConstraint?
     var pageControlBottomAnchor: NSLayoutConstraint?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setup()
         style()
         layout()
@@ -69,40 +60,20 @@ extension DemoViewController {
         pageControl.pageIndicatorTintColor = .systemGray2
         pageControl.numberOfPages = pages.count
         pageControl.currentPage = initialPage
-
-        skipButton.translatesAutoresizingMaskIntoConstraints = false
-        skipButton.setTitleColor(.systemBlue, for: .normal)
-        skipButton.setTitle("Skip", for: .normal)
-        skipButton.addTarget(self, action: #selector(skipTapped(_:)), for: .primaryActionTriggered)
-
-        nextButton.translatesAutoresizingMaskIntoConstraints = false
-        nextButton.setTitleColor(.systemBlue, for: .normal)
-        nextButton.setTitle("Next", for: .normal)
-        nextButton.addTarget(self, action: #selector(nextTapped(_:)), for: .primaryActionTriggered)
     }
 
     func layout() {
         view.addSubview(pageControl)
-        view.addSubview(nextButton)
-        view.addSubview(skipButton)
 
         NSLayoutConstraint.activate([
             pageControl.widthAnchor.constraint(equalTo: view.widthAnchor),
             pageControl.heightAnchor.constraint(equalToConstant: 20),
             pageControl.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-
-            skipButton.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 2),
-
-            view.trailingAnchor.constraint(equalToSystemSpacingAfter: nextButton.trailingAnchor, multiplier: 2),
         ])
 
         // for animations
-        skipButtonTopAnchor = skipButton.topAnchor.constraint(equalToSystemSpacingBelow: view.safeAreaLayoutGuide.topAnchor, multiplier: 2)
-        nextButtonTopAnchor = nextButton.topAnchor.constraint(equalToSystemSpacingBelow: view.safeAreaLayoutGuide.topAnchor, multiplier: 2)
         pageControlBottomAnchor = view.bottomAnchor.constraint(equalToSystemSpacingBelow: pageControl.bottomAnchor, multiplier: 2)
 
-        skipButtonTopAnchor?.isActive = true
-        nextButtonTopAnchor?.isActive = true
         pageControlBottomAnchor?.isActive = true
     }
 }
@@ -163,15 +134,11 @@ extension DemoViewController: UIPageViewControllerDelegate {
     }
 
     private func hideControls() {
-        skipButton.isHidden = true
-        nextButton.isHidden = true
         pageControl.isHidden = true
     }
 
     private func showControls() {
         pageControlBottomAnchor?.constant = 16
-        skipButtonTopAnchor?.constant = 16
-        nextButtonTopAnchor?.constant = 16
     }
 }
 
