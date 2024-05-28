@@ -23,7 +23,7 @@ class SignupViewController: LCBaseViewController {
     private var passwordTextField = LCTextField()
     private var confirmPasswordTextField = LCTextField()
 
-    private var signupButton = LCButton(title: "Create Account", backgroundColor: .systemBlue, titleColor: .white, cornerRadius: 25)
+    private var signupButton = LCButton(title: "Create Account", backgroundColor: .black, titleColor: .white, cornerRadius: 25)
 
     private var usernameAuthenticationStack = LCStackView(spacing: 4)
     private var emailAuthenticationStack = LCStackView(spacing: 4)
@@ -105,6 +105,7 @@ class SignupViewController: LCBaseViewController {
 
     @objc
     private func signupButtonTap() {
-
+        let vc = SuccessViewController()
+        navigationController?.setViewControllers([vc], animated: true)
     }
 }

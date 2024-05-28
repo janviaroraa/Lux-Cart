@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12AECC382C049420008ED2F4 /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AECC372C049420008ED2F4 /* SuccessViewController.swift */; };
+		12AECC3A2C04B71A008ED2F4 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AECC392C04B71A008ED2F4 /* OnboardingViewController.swift */; };
+		12AECC3C2C04B73E008ED2F4 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AECC3B2C04B73E008ED2F4 /* OnboardingPageViewController.swift */; };
 		12F753F52C03908E006CC5C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F753F42C03908E006CC5C8 /* AppDelegate.swift */; };
 		12F753F72C03908E006CC5C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F753F62C03908E006CC5C8 /* SceneDelegate.swift */; };
 		12F753FF2C03908E006CC5C8 /* LuxeCart.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 12F753FD2C03908E006CC5C8 /* LuxeCart.xcdatamodeld */; };
@@ -47,6 +50,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12AECC372C049420008ED2F4 /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
+		12AECC392C04B71A008ED2F4 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		12AECC3B2C04B73E008ED2F4 /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
 		12F753F12C03908E006CC5C8 /* LuxeCart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuxeCart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12F753F42C03908E006CC5C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12F753F62C03908E006CC5C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -235,6 +241,8 @@
 		12F7544A2C045452006CC5C8 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				12AECC3B2C04B73E008ED2F4 /* OnboardingPageViewController.swift */,
+				12AECC392C04B71A008ED2F4 /* OnboardingViewController.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -244,6 +252,7 @@
 			children = (
 				12F7544E2C045634006CC5C8 /* SignupViewController.swift */,
 				12F7544C2C04562A006CC5C8 /* LoginViewController.swift */,
+				12AECC372C049420008ED2F4 /* SuccessViewController.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -382,16 +391,19 @@
 				12F7544F2C045634006CC5C8 /* SignupViewController.swift in Sources */,
 				12F753FF2C03908E006CC5C8 /* LuxeCart.xcdatamodeld in Sources */,
 				12F7543C2C039CA6006CC5C8 /* UIView+Ext.swift in Sources */,
+				12AECC3C2C04B73E008ED2F4 /* OnboardingPageViewController.swift in Sources */,
 				12F753F52C03908E006CC5C8 /* AppDelegate.swift in Sources */,
 				12F754512C04581D006CC5C8 /* LCTextField.swift in Sources */,
 				12F754402C03A224006CC5C8 /* LCButton.swift in Sources */,
 				12F754582C04626C006CC5C8 /* LCImageView.swift in Sources */,
+				12AECC3A2C04B71A008ED2F4 /* OnboardingViewController.swift in Sources */,
 				12F7545A2C046B88006CC5C8 /* UIStackView+Ext.swift in Sources */,
 				12F7544D2C04562A006CC5C8 /* LoginViewController.swift in Sources */,
 				12F753F72C03908E006CC5C8 /* SceneDelegate.swift in Sources */,
 				12F754552C045FCB006CC5C8 /* LCStackView.swift in Sources */,
 				12F754312C039A86006CC5C8 /* LCBaseViewController.swift in Sources */,
 				12F754532C0459A2006CC5C8 /* LCLabel.swift in Sources */,
+				12AECC382C049420008ED2F4 /* SuccessViewController.swift in Sources */,
 				12F754432C0445C6006CC5C8 /* LaunchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -568,6 +580,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LuxeCart/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Luxé Cart";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -594,6 +607,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LuxeCart/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Luxé Cart";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

@@ -15,6 +15,7 @@ class LCBaseViewController: UIViewController {
         addViews()
         setTargets()
         layoutConstraints()
+        setupUI()
     }
 
     /// Override this method to add your views
@@ -25,4 +26,7 @@ class LCBaseViewController: UIViewController {
 
     /// Override this method to add your custom layouts
     func layoutConstraints() { }
+
+    /// Override this method to add changes to your custom UI elements
+    func setupUI() { }
 }

@@ -9,7 +9,13 @@ import UIKit
 
 class LCStackView: UIStackView {
     
-    init(spacing: CGFloat, axis: NSLayoutConstraint.Axis = .vertical, cornerRadius: CGFloat = 0, borderColor: CGColor? = nil, borderWidth: CGFloat = 0, layoutMargins: UIEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)) {
+    init(spacing: CGFloat, 
+         axis: NSLayoutConstraint.Axis = .vertical,
+         cornerRadius: CGFloat = 0,
+         borderColor: CGColor? = nil,
+         borderWidth: CGFloat = 0,
+         layoutMargins: UIEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    ) {
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
         self.axis = axis

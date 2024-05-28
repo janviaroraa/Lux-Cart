@@ -10,7 +10,13 @@ import UIKit
 
 class LCButton: UIButton {
 
-    init(title: String, backgroundColor: UIColor = .clear, titleColor: UIColor = .white, cornerRadius: CGFloat = 0, borderColor: CGColor? = nil, borderWidth: CGFloat = 0) {
+    init(title: String, 
+         backgroundColor: UIColor = .clear,
+         titleColor: UIColor = .white,
+         cornerRadius: CGFloat = 0,
+         borderColor: CGColor? = nil,
+         borderWidth: CGFloat = 0
+    ) {
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
         setTitle(title, for: .normal)

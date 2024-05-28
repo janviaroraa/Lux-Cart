@@ -9,7 +9,11 @@ import UIKit
 
 class LCLabel: UILabel {
     
-    init(text: String, fontSize: CGFloat, textAlignment: NSTextAlignment = .center, textColor: UIColor = .black) {
+    init(text: String, 
+         fontSize: CGFloat,
+         textAlignment: NSTextAlignment = .center,
+         textColor: UIColor = .black
+    ) {
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
         self.text = text
@@ -18,7 +22,11 @@ class LCLabel: UILabel {
         self.font = .systemFont(ofSize: fontSize)
     }
 
-    init(text: String, boldFontSize: CGFloat, textAlignment: NSTextAlignment = .center, textColor: UIColor = .black) {
+    init(text: String, 
+         boldFontSize: CGFloat,
+         textAlignment: NSTextAlignment = .center,
+         textColor: UIColor = .black
+    ) {
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
         self.text = text

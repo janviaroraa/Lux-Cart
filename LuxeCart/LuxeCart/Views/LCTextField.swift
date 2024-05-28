@@ -9,7 +9,11 @@ import UIKit
 
 class LCTextField: UITextField {
 
-    init(backgroundColor: UIColor = .clear, cornerRadius: CGFloat = 8, borderColor: CGColor? = UIColor.secondarySystemBackground.cgColor, borderWidth: CGFloat = 2) {
+    init(backgroundColor: UIColor = .clear, 
+         cornerRadius: CGFloat = 8,
+         borderColor: CGColor? = UIColor.secondarySystemBackground.cgColor,
+         borderWidth: CGFloat = 2
+    ) {
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
         self.backgroundColor = backgroundColor
