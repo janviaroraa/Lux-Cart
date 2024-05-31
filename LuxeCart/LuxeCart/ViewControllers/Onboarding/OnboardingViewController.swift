@@ -44,7 +44,7 @@ extension DemoViewController {
             imageName: "OboardingC",
             titleText: "Take AdvantageOf The Offer Shopping ",
             subtitleText: "Publish up your selfies to make yourself more beautiful with this app.")
-        let page4 = LoginViewController()
+        let page4 = MainTabBarViewController()
 
         pages.append(page1)
         pages.append(page2)

@@ -10,6 +10,12 @@
 		12AECC382C049420008ED2F4 /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AECC372C049420008ED2F4 /* SuccessViewController.swift */; };
 		12AECC3A2C04B71A008ED2F4 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AECC392C04B71A008ED2F4 /* OnboardingViewController.swift */; };
 		12AECC3C2C04B73E008ED2F4 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AECC3B2C04B73E008ED2F4 /* OnboardingPageViewController.swift */; };
+		12AECD122C0997DD008ED2F4 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AECD112C0997DD008ED2F4 /* MainTabBarViewController.swift */; };
+		12AECD152C099B6B008ED2F4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AECD142C099B6B008ED2F4 /* HomeViewController.swift */; };
+		12AECD1A2C099BA5008ED2F4 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AECD192C099BA5008ED2F4 /* CartViewController.swift */; };
+		12AECD1C2C099BB7008ED2F4 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AECD1B2C099BB7008ED2F4 /* NotificationsViewController.swift */; };
+		12AECD1E2C099BC3008ED2F4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AECD1D2C099BC3008ED2F4 /* ProfileViewController.swift */; };
+		12AECD202C099C86008ED2F4 /* LCTabItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AECD1F2C099C86008ED2F4 /* LCTabItems.swift */; };
 		12F753F52C03908E006CC5C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F753F42C03908E006CC5C8 /* AppDelegate.swift */; };
 		12F753F72C03908E006CC5C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F753F62C03908E006CC5C8 /* SceneDelegate.swift */; };
 		12F753FF2C03908E006CC5C8 /* LuxeCart.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 12F753FD2C03908E006CC5C8 /* LuxeCart.xcdatamodeld */; };
@@ -53,6 +59,12 @@
 		12AECC372C049420008ED2F4 /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
 		12AECC392C04B71A008ED2F4 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		12AECC3B2C04B73E008ED2F4 /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
+		12AECD112C0997DD008ED2F4 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		12AECD142C099B6B008ED2F4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		12AECD192C099BA5008ED2F4 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		12AECD1B2C099BB7008ED2F4 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		12AECD1D2C099BC3008ED2F4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		12AECD1F2C099C86008ED2F4 /* LCTabItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCTabItems.swift; sourceTree = "<group>"; };
 		12F753F12C03908E006CC5C8 /* LuxeCart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuxeCart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12F753F42C03908E006CC5C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12F753F62C03908E006CC5C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +116,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12AECD102C099779008ED2F4 /* MainTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				12AECD1F2C099C86008ED2F4 /* LCTabItems.swift */,
+				12AECD112C0997DD008ED2F4 /* MainTabBarViewController.swift */,
+			);
+			path = MainTabBar;
+			sourceTree = "<group>";
+		};
+		12AECD132C099B5D008ED2F4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				12AECD142C099B6B008ED2F4 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		12AECD162C099B72008ED2F4 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				12AECD192C099BA5008ED2F4 /* CartViewController.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		12AECD172C099B88008ED2F4 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				12AECD1B2C099BB7008ED2F4 /* NotificationsViewController.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		12AECD182C099B94008ED2F4 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				12AECD1D2C099BC3008ED2F4 /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		12F753E82C03908E006CC5C8 = {
 			isa = PBXGroup;
 			children = (
@@ -170,9 +223,14 @@
 		12F754282C03921E006CC5C8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				12F7544B2C045600006CC5C8 /* Authentication */,
 				12F7542F2C0399A3006CC5C8 /* RootView */,
+				12F7544B2C045600006CC5C8 /* Authentication */,
 				12F7544A2C045452006CC5C8 /* Onboarding */,
+				12AECD102C099779008ED2F4 /* MainTabBar */,
+				12AECD132C099B5D008ED2F4 /* Home */,
+				12AECD162C099B72008ED2F4 /* Cart */,
+				12AECD172C099B88008ED2F4 /* Notifications */,
+				12AECD182C099B94008ED2F4 /* Profile */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -390,14 +448,20 @@
 			files = (
 				12F7544F2C045634006CC5C8 /* SignupViewController.swift in Sources */,
 				12F753FF2C03908E006CC5C8 /* LuxeCart.xcdatamodeld in Sources */,
+				12AECD152C099B6B008ED2F4 /* HomeViewController.swift in Sources */,
 				12F7543C2C039CA6006CC5C8 /* UIView+Ext.swift in Sources */,
+				12AECD202C099C86008ED2F4 /* LCTabItems.swift in Sources */,
+				12AECD122C0997DD008ED2F4 /* MainTabBarViewController.swift in Sources */,
 				12AECC3C2C04B73E008ED2F4 /* OnboardingPageViewController.swift in Sources */,
+				12AECD1E2C099BC3008ED2F4 /* ProfileViewController.swift in Sources */,
 				12F753F52C03908E006CC5C8 /* AppDelegate.swift in Sources */,
 				12F754512C04581D006CC5C8 /* LCTextField.swift in Sources */,
 				12F754402C03A224006CC5C8 /* LCButton.swift in Sources */,
 				12F754582C04626C006CC5C8 /* LCImageView.swift in Sources */,
 				12AECC3A2C04B71A008ED2F4 /* OnboardingViewController.swift in Sources */,
 				12F7545A2C046B88006CC5C8 /* UIStackView+Ext.swift in Sources */,
+				12AECD1C2C099BB7008ED2F4 /* NotificationsViewController.swift in Sources */,
+				12AECD1A2C099BA5008ED2F4 /* CartViewController.swift in Sources */,
 				12F7544D2C04562A006CC5C8 /* LoginViewController.swift in Sources */,
 				12F753F72C03908E006CC5C8 /* SceneDelegate.swift in Sources */,
 				12F754552C045FCB006CC5C8 /* LCStackView.swift in Sources */,

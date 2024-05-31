@@ -42,7 +42,8 @@ class LaunchViewController: LCBaseViewController {
 
     @objc
     private func signupbuttonTap() {
-        let vc = SignupViewController()
+        #warning ("Change it back to SignupViewController()")
+        let vc = MainTabBarViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
 
