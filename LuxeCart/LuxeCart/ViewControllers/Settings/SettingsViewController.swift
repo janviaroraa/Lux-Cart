@@ -1,5 +1,5 @@
 //
-//  ProfileViewController.swift
+//  SettingsViewController.swift
 //  LuxeCart
 //
 //  Created by Janvi Arora on 31/05/24.
@@ -7,8 +7,7 @@
 
 import UIKit
 
-class ProfileViewController: LCBaseViewController {
-
+class SettingsViewController: LCBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -16,10 +15,10 @@ class ProfileViewController: LCBaseViewController {
     override func configureNavBar() {
         let backBarItem = UIBarButtonItem(image: UIImage(named: "back")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(backBarItemTap))
 
-        let settingsBarItem = UIBarButtonItem(image: UIImage(named: "settings")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(settingsBarItemTap))
+        let saveBarItem = UIBarButtonItem(image: UIImage(named: "CheckCircle")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(saveBarItemTap))
 
         navigationItem.leftBarButtonItem = backBarItem
-        navigationItem.rightBarButtonItem = settingsBarItem
+        navigationItem.rightBarButtonItem = saveBarItem
     }
 
     @objc
@@ -28,10 +27,8 @@ class ProfileViewController: LCBaseViewController {
     }
 
     @objc
-    private func settingsBarItemTap() {
-        let vc = SettingsViewController()
-        navigationController?.pushViewController(vc, animated: true)
+    private func saveBarItemTap() {
+        let overlayView = SuccessOverlayView()
+        overlayView.appear(sender: self)
     }
 }
-
-

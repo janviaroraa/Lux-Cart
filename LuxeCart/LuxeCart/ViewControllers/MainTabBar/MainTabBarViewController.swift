@@ -25,7 +25,7 @@ class MainTabBarViewController: UITabBarController {
 
     private func configureBackground() {
         let layer = CAShapeLayer()
-        layer.path = UIBezierPath(roundedRect: CGRect(x: 0, y: self.tabBar.bounds.minY - 15, width: self.tabBar.bounds.width, height: self.tabBar.bounds.height + 50), cornerRadius: (self.tabBar.frame.width/2)).cgPath
+        layer.path = UIBezierPath(roundedRect: CGRect(x: 0, y: self.tabBar.bounds.minY - 20, width: self.tabBar.bounds.width, height: self.tabBar.bounds.height + 100), cornerRadius: (self.tabBar.frame.width/2)).cgPath
         layer.shadowColor = UIColor.lightGray.cgColor
         layer.shadowOffset = CGSize(width: 5.0, height: 5.0)
         layer.shadowRadius = 25.0

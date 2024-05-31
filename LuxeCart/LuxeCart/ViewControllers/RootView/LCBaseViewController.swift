@@ -16,6 +16,7 @@ class LCBaseViewController: UIViewController {
         setTargets()
         layoutConstraints()
         setupUI()
+        configureNavBar()
     }
 
     /// Override this method to add your views
@@ -29,4 +30,7 @@ class LCBaseViewController: UIViewController {
 
     /// Override this method to add changes to your custom UI elements
     func setupUI() { }
+
+    /// Override this method to add changes to your custom navigation Bar
+    func configureNavBar() { }
 }

@@ -26,7 +26,13 @@ class LCButton: UIButton {
         layer.borderWidth = borderWidth
         layer.borderColor = borderColor
     }
-    
+
+    init(imageName: String) {
+        super.init(frame: .zero)
+        translatesAutoresizingMaskIntoConstraints = false
+        setImage(UIImage(named: imageName)?.withRenderingMode(.alwaysOriginal), for: .normal)
+    }
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
