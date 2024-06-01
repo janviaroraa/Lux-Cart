@@ -20,6 +20,15 @@ class DemoViewController: UIPageViewController {
         style()
         layout()
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = false
+    }
 }
 
 extension DemoViewController {

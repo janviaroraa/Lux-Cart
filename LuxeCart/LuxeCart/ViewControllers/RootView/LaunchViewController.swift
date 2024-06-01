@@ -17,6 +17,15 @@ class LaunchViewController: LCBaseViewController {
         super.viewDidLoad()
     }
 
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        navigationController?.isNavigationBarHidden = true
+//    }
+
+//    override func viewDidDisappear(_ animated: Bool) {
+//        navigationController?.isNavigationBarHidden = false
+//    }
+
     override func addViews() {
         view.addSubviews(signupbutton, loginbutton)
     }
