@@ -16,6 +16,13 @@ class LCImageView: UIImageView {
         image = UIImage(named: imageName)
     }
 
+    init(cornerRadius: CGFloat) {
+        super.init(frame: .zero)
+        translatesAutoresizingMaskIntoConstraints = false
+        contentMode = .scaleAspectFill
+        layer.cornerRadius = cornerRadius
+    }
+
     init(systemName: String) {
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false

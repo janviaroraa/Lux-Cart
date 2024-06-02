@@ -11,6 +11,7 @@ class LCStackView: UIStackView {
     
     init(spacing: CGFloat, 
          axis: NSLayoutConstraint.Axis = .vertical,
+         backgroundColor: UIColor = .clear,
          cornerRadius: CGFloat = 0,
          borderColor: CGColor? = nil,
          borderWidth: CGFloat = 0,
@@ -20,6 +21,7 @@ class LCStackView: UIStackView {
         translatesAutoresizingMaskIntoConstraints = false
         self.axis = axis
         self.spacing = spacing
+        self.backgroundColor = backgroundColor
         layer.cornerRadius = cornerRadius
         layer.borderWidth = borderWidth
         layer.borderColor = borderColor

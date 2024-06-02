@@ -21,6 +21,8 @@
 		12AECD2A2C09DF0B008ED2F4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AECD292C09DF0B008ED2F4 /* SettingsViewController.swift */; };
 		12AECD302C09E397008ED2F4 /* SuccessOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AECD2E2C09E397008ED2F4 /* SuccessOverlayView.swift */; };
 		12AECD312C09E397008ED2F4 /* SuccessOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12AECD2F2C09E397008ED2F4 /* SuccessOverlayView.xib */; };
+		12AECD792C0C7195008ED2F4 /* EmptySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AECD782C0C7195008ED2F4 /* EmptySearchViewController.swift */; };
+		12AECD7B2C0C733C008ED2F4 /* EmptySearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AECD7A2C0C733C008ED2F4 /* EmptySearchCollectionViewCell.swift */; };
 		12F753F52C03908E006CC5C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F753F42C03908E006CC5C8 /* AppDelegate.swift */; };
 		12F753F72C03908E006CC5C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F753F62C03908E006CC5C8 /* SceneDelegate.swift */; };
 		12F753FF2C03908E006CC5C8 /* LuxeCart.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 12F753FD2C03908E006CC5C8 /* LuxeCart.xcdatamodeld */; };
@@ -75,6 +77,8 @@
 		12AECD292C09DF0B008ED2F4 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		12AECD2E2C09E397008ED2F4 /* SuccessOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessOverlayView.swift; sourceTree = "<group>"; };
 		12AECD2F2C09E397008ED2F4 /* SuccessOverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuccessOverlayView.xib; sourceTree = "<group>"; };
+		12AECD782C0C7195008ED2F4 /* EmptySearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptySearchViewController.swift; sourceTree = "<group>"; };
+		12AECD7A2C0C733C008ED2F4 /* EmptySearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptySearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		12F753F12C03908E006CC5C8 /* LuxeCart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuxeCart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12F753F42C03908E006CC5C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12F753F62C03908E006CC5C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -192,6 +196,15 @@
 			path = Commons;
 			sourceTree = "<group>";
 		};
+		12AECD772C0C717F008ED2F4 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				12AECD782C0C7195008ED2F4 /* EmptySearchViewController.swift */,
+				12AECD7A2C0C733C008ED2F4 /* EmptySearchCollectionViewCell.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		12F753E82C03908E006CC5C8 = {
 			isa = PBXGroup;
 			children = (
@@ -267,6 +280,7 @@
 				12AECD172C099B88008ED2F4 /* Notifications */,
 				12AECD182C099B94008ED2F4 /* Profile */,
 				12AECD232C09C2A7008ED2F4 /* Categories */,
+				12AECD772C0C717F008ED2F4 /* Search */,
 				12AECD282C09DF00008ED2F4 /* Settings */,
 			);
 			path = ViewControllers;
@@ -479,7 +493,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				12F7544F2C045634006CC5C8 /* SignupViewController.swift in Sources */,
+				12AECD7B2C0C733C008ED2F4 /* EmptySearchCollectionViewCell.swift in Sources */,
 				12F753FF2C03908E006CC5C8 /* LuxeCart.xcdatamodeld in Sources */,
+				12AECD792C0C7195008ED2F4 /* EmptySearchViewController.swift in Sources */,
 				12AECD152C099B6B008ED2F4 /* HomeViewController.swift in Sources */,
 				12F7543C2C039CA6006CC5C8 /* UIView+Ext.swift in Sources */,
 				12AECD202C099C86008ED2F4 /* LCTabItems.swift in Sources */,

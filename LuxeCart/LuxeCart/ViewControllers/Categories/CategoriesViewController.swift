@@ -30,15 +30,24 @@ class CategoriesViewController: LCBaseViewController {
     override func configureNavBar() {
         let backBarItem = UIBarButtonItem(image: UIImage(named: "back")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(backBarItemTap))
 
+        let searchBarItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(searchBarItemTap))
+        searchBarItem.imageInsets = UIEdgeInsets(top: 0, left: 40, bottom: 0, right: 0)
+        searchBarItem.tintColor = .black
+
         let avatarBarItem = UIBarButtonItem(image: UIImage(named: "avatar")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(avatarBarItemTap))
 
         navigationItem.leftBarButtonItem = backBarItem
-        navigationItem.rightBarButtonItem = avatarBarItem
+        navigationItem.rightBarButtonItems = [avatarBarItem, searchBarItem]
     }
 
     @objc
     private func backBarItemTap() {
         navigationController?.popViewController(animated: true)
+    }
+
+    @objc
+    private func searchBarItemTap() {
+
     }
 
     @objc
