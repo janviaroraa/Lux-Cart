@@ -58,7 +58,7 @@ class LoginViewController: LCBaseViewController {
 
     override func layoutConstraints() {
         NSLayoutConstraint.activate([
-            appLogoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: -60),
+            appLogoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             appLogoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             appLogoImageView.heightAnchor.constraint(equalToConstant: 120),
             appLogoImageView.widthAnchor.constraint(equalToConstant: 160),

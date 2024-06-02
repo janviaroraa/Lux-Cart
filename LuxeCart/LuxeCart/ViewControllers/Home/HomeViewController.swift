@@ -35,16 +35,24 @@ class HomeViewController: LCBaseViewController {
     override func configureNavBar() {
         let menuBarItem = UIBarButtonItem(image: UIImage(named: "menu")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(menuBarItemTap))
 
+        let searchBarItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(searchBarItemTap))
+        searchBarItem.tintColor = .black
+
         let avatarBarItem = UIBarButtonItem(image: UIImage(named: "avatar")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(avatarBarItemTap))
 
         navigationItem.leftBarButtonItem = menuBarItem
-        navigationItem.rightBarButtonItem = avatarBarItem
+        navigationItem.rightBarButtonItems = [avatarBarItem, searchBarItem]
     }
 
     @objc
     private func menuBarItemTap() {
         let vc = CategoriesViewController()
         navigationController?.pushViewController(vc, animated: true)
+    }
+
+    @objc
+    private func searchBarItemTap() {
+
     }
 
     @objc
