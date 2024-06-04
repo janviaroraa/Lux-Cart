@@ -12,6 +12,20 @@ class HomeViewController: LCBaseViewController {
     private var welcomeLabel = LCLabel(text: "Welcome Username", boldFontSize: 30, textAlignment: .left)
     private var subtitleLabel = LCLabel(text: "Luxé Cart - My Life, My Style", fontSize: 14, textAlignment: .left)
 
+    private lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cv.translatesAutoresizingMaskIntoConstraints = false
+        cv.showsHorizontalScrollIndicator = false
+        cv.dataSource = self
+        cv.delegate = self
+        cv.register(ProductsCollectionViewHeaderCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: ProductsCollectionViewHeaderCell.identifier)
+        cv.register(ProductsCollectionViewCell.self, forCellWithReuseIdentifier: ProductsCollectionViewCell.identifier)
+        return cv
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -29,6 +43,11 @@ class HomeViewController: LCBaseViewController {
             subtitleLabel.topAnchor.constraint(equalTo: welcomeLabel.bottomAnchor),
             subtitleLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
             subtitleLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+
+            collectionView.topAnchor.constraint(equalTo: subtitleLabel.bottomAnchor, constant: 10),
+            collectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            collectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            collectionView.heightAnchor.constraint(equalToConstant: 100)
         ])
     }
 
@@ -62,4 +81,25 @@ class HomeViewController: LCBaseViewController {
         let vc = ProfileViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
+}
+
+extension HomeViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductsCollectionViewCell.identifier, for: indexPath) as? ProductsCollectionViewCell else { return UICollectionViewCell () }
+        return cell
+    }
+
+
+}
+
+extension HomeViewController: UICollectionViewDelegate {
+
+}
+
+extension HomeViewController: UICollectionViewDelegateFlowLayout {
+
 }
