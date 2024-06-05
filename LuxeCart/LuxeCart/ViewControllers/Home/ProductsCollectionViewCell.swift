@@ -25,6 +25,7 @@ class ProductsCollectionViewCell: UICollectionViewCell {
         productLabel.text = "New Arrivals"
         productDescLabel.text = "Product Description"
         productPriceLabel.text = "$ 49.99 USD"
+        backgroundColor = .gray
     }
 
     required init?(coder: NSCoder) {

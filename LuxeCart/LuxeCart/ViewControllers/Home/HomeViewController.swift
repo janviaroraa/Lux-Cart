@@ -31,7 +31,7 @@ class HomeViewController: LCBaseViewController {
     }
 
     override func addViews() {
-        view.addSubviews(welcomeLabel, subtitleLabel)
+        view.addSubviews(welcomeLabel, subtitleLabel, collectionView)
     }
 
     override func layoutConstraints() {
@@ -47,7 +47,7 @@ class HomeViewController: LCBaseViewController {
             collectionView.topAnchor.constraint(equalTo: subtitleLabel.bottomAnchor, constant: 10),
             collectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
             collectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
-            collectionView.heightAnchor.constraint(equalToConstant: 100)
+            collectionView.heightAnchor.constraint(equalToConstant: 150)
         ])
     }
 
@@ -93,6 +93,10 @@ extension HomeViewController: UICollectionViewDataSource {
         return cell
     }
 
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        guard let cell = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: ProductsCollectionViewHeaderCell.identifier, for: indexPath) as? ProductsCollectionViewHeaderCell else { return UICollectionReusableView() }
+        return cell
+    }
 
 }
 
@@ -101,5 +105,11 @@ extension HomeViewController: UICollectionViewDelegate {
 }
 
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: 50)
+    }
 
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: 100)
+    }
 }

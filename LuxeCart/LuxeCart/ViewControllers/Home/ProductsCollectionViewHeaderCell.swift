@@ -13,5 +13,14 @@ class ProductsCollectionViewHeaderCell: UICollectionReusableView {
     private var productTypeLabel = LCLabel(text: "New Arrivals", boldFontSize: 16, textAlignment: .left)
     private var viewAllLabel = LCLabel(text: "View All", fontSize: 14, textAlignment: .right)
 
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        backgroundColor = .red
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
 
 }
